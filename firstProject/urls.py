@@ -11,5 +11,8 @@ urlpatterns = [
     path("myapp5/", include("myapp5.urls")),
     path("myapp6/", include("myapp6.urls")),
     path("myapp7/", include("myapp7.urls")),
-    path("", include("myapp8.urls")),
+    path("myapp8/", include("myapp8.urls")),
+    path("cookieapp/", include("cookieapp.urls")),
+    path("cookieapp1/", include("cookieapp1.urls")),
+    path("", include("cookiepagecountapp.urls")),
 ]
