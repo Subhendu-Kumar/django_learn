@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from myapp6.forms import skForm
-from myapp6.models import SkModel
+from myapp7.forms import myapp7Form
+from myapp7.models import myapp7Model
 from django.contrib import messages
 
 # Create your views here.
@@ -8,17 +8,19 @@ from django.contrib import messages
 
 def form_view(request):
     if request.method == "POST":
-        fm = skForm(request.POST)
+        fm = myapp7Form(request.POST)
         if fm.is_valid():
             name = fm.cleaned_data["name"]
             email = fm.cleaned_data["email"]
             addrress = fm.cleaned_data["address"]
             age = fm.cleaned_data["age"]
-            sk = SkModel(name=name, email=email, address=addrress, age=age)
+            sk = myapp7Model(name=name, email=email, address=addrress, age=age)
             sk.save()
-            messages.add_message(request, messages.SUCCESS, "Data inserted successfully.")
+            messages.add_message(
+                request, messages.SUCCESS, "Data inserted successfully."
+            )
         else:
             messages.info(request, "Enter valid data.")
     else:
-        fm = skForm()
+        fm = myapp7Form()
     return render(request, "sk.html", {"form": fm})

@@ -15,6 +15,13 @@
         </table>
         <button type="submit">Submit</button>
     </form>
+    <div>
+        {% if messages %}
+        {% for m in messages %}
+        {{m}}
+        {% endfor %}
+        {% endif %}
+    </div>
 </body>
 
 </html>
