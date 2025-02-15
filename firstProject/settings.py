@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "cookieapp",
     "cookieapp1",
     "cookiepagecountapp",
+    "sessionapp",
 ]
 
 MIDDLEWARE = [
