@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>profile page</h1>
+    <h3>Welcome {{ name }}</h3><br><br>
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+        {{ field.label_tag }} {{ field }} <br>
+        {% for error in field.errors %}
+        <small style="color: red;">{{ error }}</small><br>
+        {% endfor %}
+        <br>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+    <div>
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>
+                {{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div><br>
+    <a href="{% url 'changepassword' %}">change profile password with old one</a><br><br>
+    <a href="{% url 'changepassword2' %}">change profile password without old one</a><br><br>
+    <a href="{% url 'logout' %}">logout form app</a>
+</body>
+
+</html>
