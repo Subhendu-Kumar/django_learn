@@ -1,6 +1,10 @@
 from django.urls import path
 from cacheapp import views
+# from django.views.decorators.cache import cache_page
 
 urlpatterns = [
-    path("", views.v1),
+    # path("v1/", (cache_page(30))(views.v1)),
+    path("v1/", views.v1),
+    path("v2/", views.v2),
+    path("v3/", views.v3),
 ]
