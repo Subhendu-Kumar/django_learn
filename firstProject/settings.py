@@ -55,12 +55,21 @@ INSTALLED_APPS = [
     "sessionapp",
     "testcookieapp",
     "sessionpagecountapp",
+    "sessionexpiredapp",
+    "cacheapp",
 ]
+
+# only for per-site cache include this middle ware in order like this
+# "django.middleware.cache.UpdateCacheMiddleware",
+# "django.middleware.common.CommonMiddleware",
+# "django.middleware.cache.FetchFromCacheMiddleware",
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "django.middleware.cache.FetchFromCacheMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -136,6 +145,21 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 STATICFILES_DIRS = [STATIC_DIR]
+
+# SESSION_COOKIE_AGE = 30
+
+# SESSION_ENGINE = "django.contrib.sessions.backends.file"
+
+# SESSION_FILE_PATH = os.path.join(BASE_DIR, "session")
+
+CACHE_MIDDLEWARE_SECONDS = 30
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+        "LOCATION": "cacheapp_cache",
+    }
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

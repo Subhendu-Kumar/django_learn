@@ -17,5 +17,7 @@ urlpatterns = [
     path("cookiepagecountapp", include("cookiepagecountapp.urls")),
     path("sessionapp/", include("sessionapp.urls")),
     path("testcookieapp/", include("testcookieapp.urls")),
-    path("", include("sessionpagecountapp.urls")),
+    path("sessionpagecountapp/", include("sessionpagecountapp.urls")),
+    path("sessionexpiredapp/", include("sessionexpiredapp.urls")),
+    path("", include("cacheapp.urls")),
 ]
