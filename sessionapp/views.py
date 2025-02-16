@@ -17,6 +17,8 @@ def get_session(request):
 
 
 def del_session(request):
-    if "skop" in request.session:
-        del request.session["skop"]
+    # if "skop" in request.session:
+    #     del request.session["skop"]
+    request.session.flush()
+    print(request.session.get_expire_at_browser_close())
     return render(request, "del.html")
