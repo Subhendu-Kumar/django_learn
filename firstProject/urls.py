@@ -20,5 +20,6 @@ urlpatterns = [
     path("sessionpagecountapp/", include("sessionpagecountapp.urls")),
     path("sessionexpiredapp/", include("sessionexpiredapp.urls")),
     path("cacheapp/", include("cacheapp.urls")),
-    path("", include("authapp.urls")),
+    path("authapp/", include("authapp.urls")),
+    path("", include("classbasedviewapp.urls")),
 ]
