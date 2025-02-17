@@ -21,5 +21,6 @@ urlpatterns = [
     path("sessionexpiredapp/", include("sessionexpiredapp.urls")),
     path("cacheapp/", include("cacheapp.urls")),
     path("authapp/", include("authapp.urls")),
-    path("", include("classbasedviewapp.urls")),
+    path("classbasedviewapp/", include("classbasedviewapp.urls")),
+    path("", include("classbasedviewapp1.urls")),
 ]

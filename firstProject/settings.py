@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "cacheapp",
     "authapp",
     "classbasedviewapp",
+    "classbasedviewapp1",
 ]
 
 MIDDLEWARE = [
