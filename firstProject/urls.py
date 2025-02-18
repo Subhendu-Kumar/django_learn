@@ -23,5 +23,6 @@ urlpatterns = [
     path("authapp/", include("authapp.urls")),
     path("classbasedviewapp/", include("classbasedviewapp.urls")),
     path("classbasedviewapp1/", include("classbasedviewapp1.urls")),
-    path("", include("classbasedviewapp2.urls")),
+    path("classbasedviewapp2/", include("classbasedviewapp2.urls")),
+    path("", include("paginationapp.urls")),
 ]
