@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     "authapp",
     "classbasedviewapp",
     "classbasedviewapp1",
+    "classbasedviewapp2",
 ]
 
 MIDDLEWARE = [
