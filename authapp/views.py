@@ -23,7 +23,7 @@ def sign_up(request):
     else:
         fm = sign_up_form()
 
-    return render(request, "signup.html", {"form": fm})
+    return render(request, "view.html", {"form": fm})
 
 
 def sign_in(request):
@@ -43,7 +43,7 @@ def sign_in(request):
     else:
         fm = AuthenticationForm()
 
-    return render(request, "signin.html", {"form": fm})
+    return render(request, "view.html", {"form": fm})
 
 
 def signout(request):
@@ -60,7 +60,7 @@ def profile(request):
                 messages.success(request, "profile updated successfully!")
         else:
             fm = edit_user_data_form(instance=request.user)
-        return render(request, "profile.html", {"name": request.user, "form": fm})
+        return render(request, "view.html", {"name": request.user, "form": fm})
     else:
         return HttpResponseRedirect("/signin/")
 
@@ -78,7 +78,7 @@ def change_password_with_old_password(request):
     else:
         fm = PasswordChangeForm(user=request.user)
 
-    return render(request, "change_password.html", {"form": fm})
+    return render(request, "view.html", {"form": fm})
 
 
 def change_password_without_old_password(request):
@@ -94,4 +94,4 @@ def change_password_without_old_password(request):
     else:
         fm = SetPasswordForm(user=request.user)
 
-    return render(request, "change_password1.html", {"form": fm})
+    return render(request, "view.html", {"form": fm})

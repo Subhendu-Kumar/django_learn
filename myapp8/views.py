@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 
 def show_home(request):
-    return render(request, "dishome.html")
+    return render(request, "view.html")
 
 
 def show_details(request, id):
-    return render(request, "display2.html", {"id": id})
+    return render(request, "view.html", {"id": id})

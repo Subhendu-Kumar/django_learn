@@ -8,7 +8,7 @@ from classbasedviewapp2.models import SuModel
 
 
 class form_view(FormView):
-    template_name = "formview.html"
+    template_name = "view.html"
     form_class = SuForm
     success_url = "/success/"
 
@@ -22,14 +22,14 @@ class form_view(FormView):
 
 class create_view(CreateView):
     model = SuModel
-    template_name = "formview.html"
+    template_name = "view.html"
     fields = "__all__"
     success_url = "/success/"
 
 
 class update_view(UpdateView):
     model = SuModel
-    template_name = "formview.html"
+    template_name = "view.html"
     fields = "__all__"
     success_url = "/success/"
 

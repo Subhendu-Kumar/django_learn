@@ -18,4 +18,4 @@ def form_view(request):
             print("form is not valid")
     else:
         fm = employeeForm()
-    return render(request, "emp.html", {"form": fm})
+    return render(request, "view.html", {"form": fm})
