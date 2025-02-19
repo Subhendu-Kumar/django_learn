@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     "paginationapp",
     "middlewareapp",
     "modelinheritanceapp",
+    "modelrelationshipapp",
 ]
 
 MIDDLEWARE = [
