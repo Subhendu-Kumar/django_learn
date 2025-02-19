@@ -25,5 +25,6 @@ urlpatterns = [
     path("classbasedviewapp1/", include("classbasedviewapp1.urls")),
     path("classbasedviewapp2/", include("classbasedviewapp2.urls")),
     path("paginationapp/", include("paginationapp.urls")),
-    path("", include("middlewareapp.urls")),
+    path("middlewareapp/", include("middlewareapp.urls")),
+    # path("", include("modelinheritanceapp.urls")),
 ]

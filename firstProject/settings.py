@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     "classbasedviewapp2",
     "paginationapp",
     "middlewareapp",
+    "modelinheritanceapp",
 ]
 
 MIDDLEWARE = [
