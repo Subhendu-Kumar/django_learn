@@ -24,5 +24,6 @@ urlpatterns = [
     path("classbasedviewapp/", include("classbasedviewapp.urls")),
     path("classbasedviewapp1/", include("classbasedviewapp1.urls")),
     path("classbasedviewapp2/", include("classbasedviewapp2.urls")),
-    path("", include("paginationapp.urls")),
+    path("paginationapp/", include("paginationapp.urls")),
+    path("", include("middlewareapp.urls")),
 ]

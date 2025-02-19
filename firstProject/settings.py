@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     "classbasedviewapp1",
     "classbasedviewapp2",
     "paginationapp",
+    "middlewareapp",
 ]
 
 MIDDLEWARE = [
@@ -74,6 +75,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "middlewareapp.middleware.first_middleware_cls",
+    "middlewareapp.middleware.second_middleware_cls",
+    "middlewareapp.middleware.third_middleware_cls",
 ]
 
 ROOT_URLCONF = "firstProject.urls"
