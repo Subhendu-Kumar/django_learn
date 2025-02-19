@@ -12,6 +12,6 @@ def set_session(request):
 def get_session(request):
     if "skop" in request.session:
         value = request.session["skop"]
-        return render(request, "get.html", {"value": value})
+        return render(request, "view.html", {"value": value})
     else:
         return HttpResponse("session has expired")

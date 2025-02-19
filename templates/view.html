@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hele every one i am subhendu welcome to my django app</h1>
+    {% if msg %}
+    <h3>{{ msg }}</h3>
+    {% endif %}
+    {% if count %}
+    <h1>session count: {{ count }}</h1>
+    {% endif %}
+    {% if name %}
+    <h3>Name : {{ name }}</h3>
+    {% endif %}
+    {% if city %}
+    <h3>Address : {{ city }}</h3>
+    {% endif %}
+    {% if students %}
+    <div>
+        {% for student in students %}
+        <a href="{% url 'details' student.id %}">Name: {{ student.name }}</a>
+        <hr>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if value %}
+    <h1>session value is : {{ value }}</h1><br>
+    {% endif %}
+    {% if student %}
+    <div>
+        <h4>Name: {{ student.name }}</h4>
+        <h4>Fathers name: {{ student.father_name }}</h4>
+        <h4>Mothers name: {{ student.mother_name }}</h4>
+        <h4>Address: {{ student.address }}</h4>
+        <h4>Branch: {{ student.branch }}</h4>
+        <h4>Age: {{ student.age }}</h4>
+    </div>
+    {% endif %}
+</body>
+
+</html>

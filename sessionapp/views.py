@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 def set_session(request):
     request.session["skop"] = "skopisbest"
-    return render(request, "set.html")
+    return render(request, "view.html")
 
 
 def get_session(request):
@@ -13,7 +13,7 @@ def get_session(request):
     value = request.session.get("skop", "no session id found")
     age = request.session.get_expiry_age()
     date = request.session.get_expiry_date()
-    return render(request, "get.html", {"value": value, "age": age, "date": date})
+    return render(request, "view.html", {"value": value, "age": age, "date": date})
 
 
 def del_session(request):
@@ -21,4 +21,4 @@ def del_session(request):
     #     del request.session["skop"]
     request.session.flush()
     print(request.session.get_expire_at_browser_close())
-    return render(request, "del.html")
+    return render(request, "view.html")

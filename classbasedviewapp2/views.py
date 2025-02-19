@@ -41,8 +41,8 @@ class delete_view(DeleteView):
 
 
 class success(TemplateView):
-    template_name = "success.html"
+    template_name = "view.html"
 
 
 class nodelete(TemplateView):
-    template_name = "nodelete.html"
+    template_name = "view.html"

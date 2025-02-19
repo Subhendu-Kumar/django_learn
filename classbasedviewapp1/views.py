@@ -17,14 +17,14 @@ class list_view(ListView):
 
 class details_view(DetailView):
     model = SubhenduModel
-    template_name = "details.html"
+    template_name = "view.html"
     pk_url_kwarg = "id"
     context_object_name = "student"
 
 
 class combine_view1(DetailView):
     model = SubhenduModel
-    template_name = "details.html"
+    template_name = "view.html"
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
@@ -34,5 +34,5 @@ class combine_view1(DetailView):
 
 class combine_view2(ListView):
     model = SubhenduModel
-    template_name = "list.html"
+    template_name = "view.html"
     context_object_name = "students"

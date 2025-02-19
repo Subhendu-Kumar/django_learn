@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 def set_session(request):
     request.session.set_test_cookie()
-    return render(request, "set.html")
+    return render(request, "view.html")
 
 
 def check_session(request):
@@ -13,9 +13,9 @@ def check_session(request):
         print("users browser allow accepting cookie")
     else:
         print("user has disabled cookies")
-    return render(request, "check.html")
+    return render(request, "view.html")
 
 
 def del_session(request):
     request.session.delete_test_cookie()
-    return render(request, "del.html")
+    return render(request, "view.html")

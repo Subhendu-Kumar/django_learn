@@ -9,6 +9,6 @@ def count_page_view(request):
         newcount = int(request.COOKIES["count"]) + 1
     else:
         newcount = 1
-    res = render(request, "count.html", {"count": newcount})
+    res = render(request, "view.html", {"count": newcount})
     res.set_cookie("count", newcount)
     return res
