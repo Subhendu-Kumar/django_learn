@@ -9,7 +9,7 @@ from classbasedviewapp.forms import myForm
 class my_view(View):
     def get(self, request):
         fm = myForm()
-        return render(request, "cls.html", {"form": fm})
+        return render(request, "view.html", {"form": fm})
 
 
 # rendering multiple template using same view

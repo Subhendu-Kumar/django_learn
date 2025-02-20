@@ -23,4 +23,4 @@ def form_view(request):
             messages.info(request, "Enter valid data.")
     else:
         fm = myapp7Form()
-    return render(request, "sk.html", {"form": fm})
+    return render(request, "view.html", {"form": fm})

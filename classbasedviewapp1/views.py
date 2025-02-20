@@ -9,7 +9,7 @@ from classbasedviewapp1.models import SubhenduModel
 class list_view(ListView):
     model = SubhenduModel
     ordering = ["name"]
-    context_object_name = "students"
+    context_object_name = "students2"
 
     # def get_queryset(self):
     #     return SubhenduModel.objects.filter(age=21)

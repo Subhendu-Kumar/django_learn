@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <h1>hele every one i am subhendu welcome to my django app</h1>
+    <h1>Hele everyone. i am subhendu. welcome to my django app</h1>
+    <hr>
     {% if msg %}
     <h3>{{ msg }}</h3>
     {% endif %}
@@ -78,6 +79,76 @@
     {% endif %}
     {% if password %}
     <h1>password is : {{password}}</h1>
+    {% endif %}
+    {% if students2 %}
+    <h1>All students</h1>
+    <hr>
+    <div>
+        {% for student in students2 %}
+        <div>
+            <h4>Name: {{ student.name }}</h4>
+            <h4>Fathers name: {{ student.father_name }}</h4>
+            <h4>Mothers name: {{ student.mother_name }}</h4>
+            <h4>Address: {{ student.address }}</h4>
+            <h4>Branch: {{ student.branch }}</h4>
+            <h4>Age: {{ student.age }}</h4>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if student2 %}
+    <h1>Students</h1>
+    {% for stu in student %}
+    <h2>Student</h2>
+    <h3>{{stu.name}}</h3>
+    <h3>{{stu.address}}</h3>
+    <h3>{{stu.email}}</h3>
+    <h3>{{stu.age}}</h3>
+    <br>
+    <br>
+    <br>
+    {% endfor %}
+    {% else %}
+    <h1 style="color: red;">No student details found</h1>
+    {% endif %}
+    {% if student3 %}
+    <h2>{{student.name}}</h2>
+    <h2>{{student.address}}</h2>
+    <h2>{{student.email}}</h2>
+    <h2>{{student.age}}</h2>
+    {% endif %}
+    {% if page_obj %}
+    <h1>Books list</h1>
+    <hr>
+    <div>
+        {% for item in page_obj %}
+        <div>
+            <a href="{% url 'details' item.id %}">Title: {{item.title}}</a>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+    <br>
+    <hr>
+    <div>
+        {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">Prevoius</a>
+        {% endif %}
+        &nbsp;&nbsp;&nbsp;
+        {{ page_obj.number }}
+        &nbsp;&nbsp;&nbsp;
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% if book %}
+    <h1>details view</h1>
+    <hr>
+    <p>{{ book.title }}</p>
+    <p>{{ book.author }}</p>
+    <p>{{ book.published }}</p>
     {% endif %}
 </body>
 

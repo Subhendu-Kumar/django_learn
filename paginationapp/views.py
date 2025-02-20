@@ -12,12 +12,12 @@ def page_view(request):
     page = Paginator(all_pages, 2)
     page_num = request.GET.get("page")
     page_obj = page.get_page(page_num)
-    return render(request, "paginatedview.html", {"page_obj": page_obj})
+    return render(request, "view.html", {"page_obj": page_obj})
 
 
 class page_list_cls(ListView):
     model = book
-    template_name = "paginatedview.html"
+    template_name = "view.html"
     paginate_by = 2
 
     def get_context_data(self, *args, **kwargs):
@@ -30,4 +30,4 @@ class page_list_cls(ListView):
 
 class page_details_cls(DetailView):
     model = book
-    template_name = "detailview.html"
+    template_name = "view.html"
