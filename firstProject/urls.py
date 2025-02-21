@@ -28,5 +28,6 @@ urlpatterns = [
     path("middlewareapp/", include("middlewareapp.urls")),
     path("querysetapiapp/", include("querysetapiapp.urls")),
     path("querysetapiapp2/", include("querysetapiapp2.urls")),
-    path("", include("querysetapiapp3.urls")),
+    path("querysetapiapp3/", include("querysetapiapp3.urls")),
+    path("", include("crudmysqlapp.urls")),
 ]

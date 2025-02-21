@@ -190,6 +190,29 @@
     <p>Min marks: {{analytics_std.min_marks.marks__min}}</p>
     <p>Marks count: {{analytics_std.count.marks__count}}</p>
     {% endif %}
+    {% if users %}
+    {% for data in users %}
+    <h3>Id: {{data.id}}</h3>
+    <h3>Name: {{data.name}}</h3>
+    <Button><a href="/delete/{{data.id}}">delete</a></Button>
+    <Button><a href="/edit/{{data.id}}">edit</a></Button>
+    <hr>
+    {% endfor %}
+    {% endif %}
+    {% if user %}
+    <form action="/update/{{user.id}}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" value="{{user.name}}">
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" value="{{user.email}}">
+        </div>
+        <button type="submit">submit</button>
+    </form>
+    {% endif %}
 </body>
 
 </html>
