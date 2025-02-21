@@ -168,6 +168,28 @@
     <hr>
     {% endfor %}
     {% endif %}
+    {% if std_data %}
+    {% for data in std_data %}
+    <h3>Id: {{data.id}}</h3>
+    <h3>Name: {{data.name}}</h3>
+    <h3>Branch: {{data.branch}}</h3>
+    <h3>Email: {{data.email}}</h3>
+    <h3>Address: {{data.address}}</h3>
+    <h3>Marks: {{data.marks}}</h3>
+    <h3>Age: {{data.age}}</h3>
+    <h3>Admission date: {{data.date_admited}}</h3>
+    <h3>Passout date: {{data.date_passed}}</h3>
+    <hr>
+    {% endfor %}
+    {% endif %}
+    {% if analytics_std %}
+    <h3>analytics</h3>
+    <p>Average marks: {{analytics_std.avg_marks.marks__avg}}</p>
+    <p>Total marks: {{analytics_std.total_marks.marks__sum}}</p>
+    <p>Max marks: {{analytics_std.max_marks.marks__max}}</p>
+    <p>Min marks: {{analytics_std.min_marks.marks__min}}</p>
+    <p>Marks count: {{analytics_std.count.marks__count}}</p>
+    {% endif %}
 </body>
 
 </html>
