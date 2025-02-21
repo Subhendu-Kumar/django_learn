@@ -99,7 +99,7 @@
     {% endif %}
     {% if student2 %}
     <h1>Students</h1>
-    {% for stu in student %}
+    {% for stu in student2 %}
     <h2>Student</h2>
     <h3>{{stu.name}}</h3>
     <h3>{{stu.address}}</h3>
@@ -109,8 +109,6 @@
     <br>
     <br>
     {% endfor %}
-    {% else %}
-    <h1 style="color: red;">No student details found</h1>
     {% endif %}
     {% if student3 %}
     <h2>{{student.name}}</h2>
@@ -149,6 +147,17 @@
     <p>{{ book.title }}</p>
     <p>{{ book.author }}</p>
     <p>{{ book.published }}</p>
+    {% endif %}
+    {% if person %}
+    <h1>Persons</h1><br>
+    {% for per in person %}
+    <h2>Person</h2>
+    <h3>Name: {{per.name}}</h3>
+    <h3>City: {{per.city}}</h3>
+    <h3>Age: {{per.age}}</h3>
+    <h3>DOB: {{per.dob}}</h3>
+    <hr>
+    {% endfor %}
     {% endif %}
 </body>
 

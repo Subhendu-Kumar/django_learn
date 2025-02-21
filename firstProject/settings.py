@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     "middlewareapp",
     "modelinheritanceapp",
     "modelrelationshipapp",
+    "querysetapiapp"
 ]
 
 MIDDLEWARE = [
