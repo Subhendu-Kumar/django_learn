@@ -159,6 +159,15 @@
     <hr>
     {% endfor %}
     {% endif %}
+    {% if mydata %}
+    <h1>Persons</h1><br>
+    {% for data in mydata %}
+    <h2>Person</h2>
+    <h3>Id: {{data.id}}</h3>
+    <h3>Name: {{data.name}}</h3>
+    <hr>
+    {% endfor %}
+    {% endif %}
 </body>
 
 </html>

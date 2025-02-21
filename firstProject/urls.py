@@ -26,5 +26,6 @@ urlpatterns = [
     path("classbasedviewapp2/", include("classbasedviewapp2.urls")),
     path("paginationapp/", include("paginationapp.urls")),
     path("middlewareapp/", include("middlewareapp.urls")),
-    path("", include("querysetapiapp.urls"))
+    path("querysetapiapp/", include("querysetapiapp.urls")),
+    path("", include("querysetapiapp2.urls")),
 ]
